@@ -21,10 +21,11 @@ public class ItemServiceImpl implements ItemService {
 	
 	@Override
 	public List<Item> findAll() {
-		//con feign
+		//con feign y ribbon
 		//List<Producto> productos = Arrays.asList(clienteRest.getForObject("http://localhost:8001/listar", Producto[].class));
 		
-		//con clienteresttemplate y ribbon
+		//con cliente RestTemplate y ribbon, se sustituye ip y puerto por nombre del ms cliente
+		//esto abstrae y desacopla ip y puerto
 		List<Producto> productos = Arrays.asList(clienteRest.getForObject("http://servicio-productos/listar", Producto[].class));
 		return productos.stream().map( p -> new Item(p,1)).collect(Collectors.toList());
 	}

@@ -12,6 +12,10 @@ import com.formacionbdi.springboot.app.item.models.Item;
 
 @Service("serviceFeign")
 //@Primary --usado cuando hay mas de un cliente rest esto indica el principal a tomar en cuenta
+//esto hará que en itemcontroller de la clase ItemController con el autowired, se inyecte automaticamente este ItemService implementacion
+//y no el itemservice de resttemplate
+//por otro lado al agregar nombre al Service, tambien se manda a llamar al itemcontroller
+//para hacerlo de forma mas explicita
 public class ItemServiceFeign implements ItemService {
 	
 	@Autowired
