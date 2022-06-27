@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<!-- <version>2.2.11.RELEASE</version> -->
+		<!-- <version>2.2.11.RELEASE</version> para usar ribbon-->
 		<!--<version>2.3.12.RELEASE</version> se quita esta version al usar el resilience4j-->
 		<version>2.5.3</version>
 		<relativePath /> <!-- lookup parent from repository -->
@@ -49,15 +49,19 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-
+<!--<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+		</dependency> -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		
+		
 		<!--<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>, con version de spring boot 2.3.12.RELEASE
 		</dependency> Se quita esta dependencia cuando se integra Resilience4j-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

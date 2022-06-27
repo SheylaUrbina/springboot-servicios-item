@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 //comunicacion de los servicios
-//@EnableCircuitBreaker  1. habilitado hystrix, hilos separados de ms, envuelve ribbon para manejar
+//@EnableCircuitBreaker  1. habilitado hystrix, hilos separados de ms, envuelve ribbon para manejar tolerancia a fallos, time out
 //2. @EnableCircuitBreaker Se quita cuando se integra el Resilience4j
 //tolerancia a fallos,manejo de latencia y time out
 
